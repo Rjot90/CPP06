@@ -1,6 +1,5 @@
 #include "ScalarConverter.hpp"
 
-// Convert input to int if it is a valid whole number within int range.
 void convertToInt(const std::string input)
 {
 	char *endptr;
@@ -22,7 +21,6 @@ void convertToInt(const std::string input)
 	std::cout << "int: " << static_cast<int>(nb) << std::endl;
 }
 
-// Convert input to a displayable ASCII char when possible.
 void convertToChar(std::string input)
 {
 	if (input.size() == 1)
@@ -48,7 +46,6 @@ void convertToChar(std::string input)
 		if (std::floor(nb) != nb)
 			return (void)(std::cerr << "char: impossible" << std::endl);
 
-		// Accept plain numbers or floats with a trailing 'f'.
 		if (endptr[0] == '\0' || (endptr[0] == 'f' && endptr[1] == '\0'))
 		{
 			if (isascii(static_cast<int>(nb)))
@@ -137,7 +134,6 @@ void convertToDouble(std::string str)
 		std::cout << "double: impossible" << std::endl;
 }
 
-// Run all conversions on the same input string.
 void ScalarConverter::converter(std::string input)
 {
 	convertToChar(input);
