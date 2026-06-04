@@ -64,7 +64,6 @@ void convertToChar(std::string input)
 }
 
 
-// Convert input to float and print with .0f when it is an integer value.
 void convertToFloat(std::string str)
 {
 	float nb;
@@ -75,7 +74,6 @@ void convertToFloat(std::string str)
 	if (endptr == str.c_str())
 		return (void)(std::cout << "float: impossible" << std::endl);
 
-	// Accept plain numbers or floats with a trailing 'f'.
 	if (endptr[0] == '\0' || (endptr[0] == 'f' && endptr[1] == '\0'))
 	{
 		if (std::isnan(nb))
@@ -99,7 +97,6 @@ void convertToFloat(std::string str)
 		std::cout << "float: impossible" << std::endl;
 }
 
-// Convert input to double and print with .0 when it is an integer value.
 void convertToDouble(std::string str)
 {
 	double nb;
@@ -110,7 +107,6 @@ void convertToDouble(std::string str)
 	if (endptr == str.c_str())
 		return (void)(std::cout << "double: impossible" << std::endl);
 
-	// Accept plain numbers or floats with a trailing 'f'.
 	if (endptr[0] == '\0' || (endptr[0] == 'f' && endptr[1] == '\0'))
 	{
 		if (std::isnan(nb))
